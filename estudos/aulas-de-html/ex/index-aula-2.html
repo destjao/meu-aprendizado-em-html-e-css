@@ -1,42 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu HTML</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charge phone</title>
 
-    <style>
-        h1 {
-            background: red;
-        }
+  <style>
+    .battery-top {
+      width: 30px;
+      height: 10px;
+      background: black;
+      margin: 0 auto;
+      border: 3px solid silver;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+    }
 
-        p {
-            background: blue;
-        }
+    .battery-content {
+      width: 150px;
+      height: 250px;
+      background: black;
+      position: relative;
+      margin: 20px auto;
+      border: 1px solid silver;
+      border-radius: 18px;
+    }
 
-        #heading-2 {
-            background: purple;
-        }
+    .charge {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      border-radius: 14px;
+      animation: battery 8s linear infinite;
+    }
 
-        .fundo-vermelho {
-            background: red;
-        }
-
-        #text-1 {
-            background: brown;
-            color: white;
-        }
-    </style>
+    @keyframes battery {
+      0% {
+        height: 0%;
+        background: red;
+      }
+      25% {
+        height: 100%;
+        background: orange;
+      }
+      50% {
+        height: 100%;
+        background: yellow;
+      }
+      100% {
+        height: 100%;
+        background: green;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <h1 id="heading-1" class="fundo-vermelho borda-esquerda">Vai vir aqui</h1>
-    <h1 id="heading-2" class="fundo-vermelho">Vai vir aqui</h1>
-    <p>Um texto <b>qualquer</b>.</p>
-    <p id="text-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quisquam, accusamus corrupti porro
-        non labore voluptate ab, omnis ea reiciendis doloribus! Sit, fugit. Illum cupiditate asperiores expedita aliquam
-        quis possimus.</p>
+  <div class="main">
+    <div class="battery-top"></div>
+    <div class="battery-content">
+      <div class="charge"></div>
+    </div>
+  </div>
 </body>
-
 </html>

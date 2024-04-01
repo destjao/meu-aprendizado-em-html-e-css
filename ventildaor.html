@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventilador</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            border: 20px solid aqua;
+            padding: 50px;
+            border-radius: 50%;
+            animation: fananim linear infinite;
+        }
+        button {
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            padding: 20px 30px;
+            margin: 0 20px;
+            font-size: 25px;
+            font-weight: 550;
+            border: none;
+            background-color: silver;
+            border-radius: 50%;
+            transition: 0.1s;
+        }
+        button:active {
+            box-shadow: 0px 10px 10px black;
+            transform: scale(0.95);
+        }
+        main button:nth-last-child(5) {
+            background-color: rgb(0, green, 0);
+        }
+        main button:nth-last-child(4) {
+            background-color: rgb(255, 0, 0);
+        }
+        @keyframes fananim {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script>
+        function myfunon() {
+            document.getElementById("img").style.animation = "fanim 1s linear infinite";
+        }
+
+        function myfunoff() {
+            document.getElementById("img").style.animation = "none";
+        }
+
+        function myfun1() {
+            document.getElementById("img").style.animation = "fanim 2s linear infinite";
+        }
+
+        function myfun2() {
+            document.getElementById("img").style.animation = "fanim 1.5s linear infinite";
+        }
+
+        function myfun3() {
+            document.getElementById("img").style.animation = "fanim 1s linear infinite";
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <img id="img" src="fan.png" alt="">
+        <button onclick="myfunon()">ON</button>
+        <button onclick="myfunoff()">OFF</button>
+        <button onclick="myfun1()">1</button>
+        <button onclick="myfun2()">2</button>
+        <button onclick="myfun3()">3</button>
+    </div>
+</body>
+</html>
