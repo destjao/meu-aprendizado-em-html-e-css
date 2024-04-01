@@ -1,49 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu HTML</title>
+    <title>Tabelas</title>
 
     <style>
+        .responsive-table {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        body{
+            font-family: sans-serif;
+            font-size: 14px;
+        }
         table {
             border-collapse: collapse;
+            width: 30%;
         }
-
-        table td,
-        table th {
-            border: 1px solid #ccc;
+        table td, table th {
+            border: 2px solid #000;
             padding: 5px;
+            text-align: center;
+        }
+        table caption {
+            caption-side: bottom;
+            text-align: left;
+            font-style: italic;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        tfoot td, table th {
+            background-color: #ccc;
         }
     </style>
 </head>
-
 <body>
-    <p>Lorem ipsum dolor sit.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Título 1</th>
-                <th>Título 2</th>
-                <th>Título 3</th>
-            </tr>
-        </thead>
+    <div class="responsive-table">
 
-        <tbody>
-            <tr>
-                <td>Corpo 1</td>
-                <td>Corpo 2</td>
-                <td> Corpo 3</td>
-            </tr>
-            <tr>
-                <td>Corpo 1</td>
-                <td>Corpo 2</td>
-                <td>Corpo 3</td>
-            </tr>
-        </tbody>
-    </table>
+        <table>
+            <caption>Uma descrição da table</caption>
+            <thead>
+                <tr>
+                    <th>Title 1</th>
+                    <th>Title 2</th>
+                    <th>Title 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Body 1</td>
+                    <td>Body 2</td>
+                    <td>Body 3</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Body</td>
+                </tr>
+                <tr>
+                    <td>Body 1</td>
+                    <td>Body 2</td>
+                    <td>Body 3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Foot 1</td>
+                    <td>Foot 2</td>
+                    <td>Foot 3</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
 </body>
-
 </html>
