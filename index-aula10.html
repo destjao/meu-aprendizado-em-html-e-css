@@ -8,10 +8,10 @@
 
     <style>
         body {
-            font-family: sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
-        label .nomes {
+        .name label {
             cursor: pointer;
             display: block;
         }
@@ -20,29 +20,61 @@
             display: inline;
         }
     </style>
+
 </head>
 
 <body>
 
     <form action="#" method="get" target="_blank" autocomplete="off">
-        <p>O meu form</p>
-        <p>
-            <label for="nome" class="nomes">Nome:</label>
-            <input type="text" id="nome" name="nomes" placeholder="Seu nome" required>
-        </p>
 
-        <p class="devs">
-            Você já é desenvolvedor: <br>
+        <h1>O meu formulário</h1>
+
+        <div class="name">
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+        </div>
+
+        <div class="devs">
+
+            <p>Você já é desenvolvedor: </p>
+
             <label for="yes">Sim</label>
             <input type="radio" id="yes" name="dev" value="yes">
+
             <label for="no">Não</label>
             <input type="radio" id="no" name="dev" value="no">
-        </p>
 
-        <p>
+        </div>
+
+        <div class="brithday"><br>
+
+            <label for="date">Data de Nascimento</label><br>
+            <input type="date" id="date" name="date" required>
+
+        </div><br>
+
+        <div class="color">
+
+            <label for="cor">Cor preferida:</label> <br>
+            <input type="color" id="cor" name="cor" value="#003d66">
+
+        </div><br>
+
+        <div class="email">
+
+            <label for="email">E-mail de contato:</label> <br>
+            <input type="email" id="email" name="email" placeholder="ex.: email@meuemail.com" required>
+
+        </div>
+
+        <div>
+
             <button type="submit">Send</button>
             <button type="reset">Reset</button>
-        </p>
+
+        </div>
 
     </form>
 
