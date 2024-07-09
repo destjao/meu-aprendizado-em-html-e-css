@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Personalizado</title>
+    <title>Tela de Fornos</title>
     <style>
         body, html {
             margin: 0;
@@ -40,28 +40,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: calc(100% - 120px);
+            height: calc(100% - 100px);
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(3, 150px);
-            grid-template-rows: repeat(2, 190px);
+            grid-template-columns: repeat(3, 250px);
             gap: 40px;
         }
-        .button-container {
+        .forno-container {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+        .forno-title {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
         .square {
             background-color: #f0f0f0;
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
-            font-weight: bold;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
         }
@@ -74,10 +76,18 @@
             max-height: 100%;
             object-fit: cover;
         }
-        .button-title {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        .info-box {
             margin-top: 10px;
-            text-align: center;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            width: 200px;
+        }
+        .info-box p {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+        .info-label {
             font-weight: bold;
         }
     </style>
@@ -95,29 +105,38 @@
     </div>
     <div class="content">
         <div class="grid">
-            <div class="button-container">
-                <button class="square"><img src="C:/Users/João Vitor/Downloads/image.png" alt="Imagem 1"></button>
-                <div class="button-title">FORNOS</div>
+            <div class="forno-container">
+                <div class="forno-title">FORNO 1</div>
+                <button class="square"><img src="C:/Users/João Vitor/Downloads/image.png" alt="Forno 1"></button>
+                <div class="info-box">
+                    <p><span class="info-label">CORRIDA:</span> 100001</p>
+                    <p><span class="info-label">LIGA:</span> FBN4</p>
+                    <p><span class="info-label">INÍCIO CARREGAMENTO:</span> 07:30h</p>
+                    <p><span class="info-label">TOTAL PREVISTO:</span> 12.000KG</p>
+                    <p><span class="info-label">TOTAL REALIZADO:</span> 12.000KG</p>
+                </div>
             </div>
-            <div class="button-container">
-                <button class="square"><img src="C:/Users/João Vitor/Downloads/image (1).png" alt="Imagem 4"></button>
-                <div class="button-title">PANELAS</div>
+            <div class="forno-container">
+                <div class="forno-title">FORNO 2</div>
+                <button class="square"><img src="C:/Users/João Vitor/Downloads/image.png" alt="Forno 2"></button>
+                <div class="info-box">
+                    <p><span class="info-label">CORRIDA:</span> 100001</p>
+                    <p><span class="info-label">LIGA:</span> FBN4</p>
+                    <p><span class="info-label">INÍCIO CARREGAMENTO:</span> 07:30h</p>
+                    <p><span class="info-label">TOTAL PREVISTO:</span> 12.000KG</p>
+                    <p><span class="info-label">TOTAL REALIZADO:</span> 12.000KG</p>
+                </div>
             </div>
-            <div class="button-container">
-                <button class="square"><img src="C:/Users/João Vitor/Downloads/image (2).png" alt="Imagem 5"></button>
-                <div class="button-title">MOLDES</div>
-            </div>
-            <div class="button-container">
-                <button class="square"><img src="C:/Users/João Vitor/Downloads/image (3).png" alt="Imagem 2"></button>
-                <div class="button-title">ANÁLISES</div>
-            </div>
-            <div class="button-container">
-                <button class="square"><img src="C:/Users/João Vitor/Downloads/image (4).png" alt="Imagem 3"></button>
-                <div class="button-title">DESMOLDAGENS</div>
-            </div>
-            <div class="button-container">
-                <button class="square"><img src="C:/Users/João Vitor/Downloads/image (5).png" alt="Imagem 6"></button>
-                <div class="button-title">RELATÓRIOS</div>
+            <div class="forno-container">
+                <div class="forno-title">FORNO 3</div>
+                <button class="square"><img src="C:/Users/João Vitor/Downloads/image.png" alt="Forno 3"></button>
+                <div class="info-box">
+                    <p><span class="info-label">CORRIDA:</span> 100001</p>
+                    <p><span class="info-label">LIGA:</span> FBN4</p>
+                    <p><span class="info-label">INÍCIO CARREGAMENTO:</span> 07:30h</p>
+                    <p><span class="info-label">TOTAL PREVISTO:</span> 12.000KG</p>
+                    <p><span class="info-label">TOTAL REALIZADO:</span> 12.000KG</p>
+                </div>
             </div>
         </div>
     </div>
